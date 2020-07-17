@@ -17,14 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('ary', function(){
-    return 'bonjour mola! ';
-});
+Auth::routes();
 
-Route::get('cedou', function(){
-    return 'Dieu soit loué';
-});
-
-Route::get('ary/{name}', function($name){
-    return'bonjour $name';
-});
+Route::get('/home', 'HomeController@index')->name('home');
